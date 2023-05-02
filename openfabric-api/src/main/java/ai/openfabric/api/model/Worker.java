@@ -10,6 +10,8 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity()
+@Getter
+@Setter
 public class Worker extends Datable implements Serializable {
 
     @Id
@@ -19,17 +21,13 @@ public class Worker extends Datable implements Serializable {
     @Setter
     private String id;
 
-    @Getter
-    @Setter
     private String name;
 
     @ElementCollection
-    @Getter
-    @Setter
-    private List<String> ports;
+    private List<Integer> ports;
 
-    @Getter
-    @Setter
     private String status;
+
+    private String image;
 
 }

@@ -41,6 +41,21 @@
             <column name="created_at" type="DATETIME"/>
             <column name="updated_at" type="DATETIME"/>
             <column name="deleted_at" type="DATETIME"/>
+
+            <column name="ports" type="integer[]"/>
+            <column name="status" type="varchar(255)"/>
+            <column name="image" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="WO_02" author="andrei">
+        <createTable tableName="worker_ports" remarks="Worker Ports table">
+            <column name="worker_id" type="${uuid_type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_WORKER_PORTS"/>
+            </column>
+            <column name="ports" type="integer">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_WORKER_PORTS"/>
+            </column>
         </createTable>
     </changeSet>
 
