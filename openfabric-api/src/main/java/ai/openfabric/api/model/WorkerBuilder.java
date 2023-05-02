@@ -14,11 +14,6 @@ public class WorkerBuilder {
         worker = new Worker();
     }
 
-    public WorkerBuilder withId(String id) {
-        worker.setId(id);
-        return this;
-    }
-
     public WorkerBuilder withName(String name) {
         worker.setName(name);
         return this;
